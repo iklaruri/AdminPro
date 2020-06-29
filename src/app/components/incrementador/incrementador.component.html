@@ -1,0 +1,15 @@
+<h3>{{leyenda}}</h3>
+
+<div class="input-group">
+  <div class="input-group-append">
+    <button (click)="cambiarValor(-5)" class="btn btn-primary" type="button">
+      <i class="mdi mdi-minus"></i>
+    </button>
+  </div>
+  <input #progreso (ngModelChange)="actualizarBarraValor($event)" type="number" name="textProgreso" class="form-control" [(ngModel)]="porcentaje" min="0" max="100">
+  <div class="input-group-append">
+    <button (click)="cambiarValor(+5)" class="btn btn-primary" type="button">
+      <i class="mdi mdi-plus"></i>
+    </button>
+  </div>
+</div>

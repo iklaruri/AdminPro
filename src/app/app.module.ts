@@ -1,12 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { PageModule } from './pages/pages.module';
 import { LoginModule } from './login/login.module';
 import { SharedModule } from './shared/shared.module';
+import { ServiceModule } from './services/service.module';
+
 
 import { APP_ROUTES } from './app.routes';
+
 
 @NgModule({
   declarations: [
@@ -14,9 +18,11 @@ import { APP_ROUTES } from './app.routes';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     LoginModule,
     PageModule,
     SharedModule,
+    ServiceModule,
     APP_ROUTES
   ],
   providers: [],
