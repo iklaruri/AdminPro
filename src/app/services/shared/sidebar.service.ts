@@ -15,13 +15,13 @@ export class SidebarService {
           url:'/dashboard'
         },
         {
-          titulo:'ProgressBar',
+          titulo:'Progress',
           url:'/progress'
         },
         {
           titulo:'Gráficas',
           url:'/grafics'
-        }
+        },        
       ]
     }
   ]

@@ -1,19 +1,26 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
+import { CommonModule } from '@angular/common';
 
+
+// COMPONENTES
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { GraficsComponent } from './grafics/grafics.component';
 import { PagesComponent } from './pages.component';
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { GraficoDonutComponent } from '../components/graficos/grafico-donut/grafico-donut.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { ProfileComponent } from './profile/profile.component';
 
+// MODULOS
 import { SharedModule } from '../shared/shared.module';
+import { PipesModule } from '../pipes/pipes.module';
 
+//RUTAS
 import { PAGES_ROUTES } from './pages.routes';
 
-import { ChartsModule } from 'ng2-charts';
-import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 
 
@@ -25,7 +32,8 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
     PagesComponent,
     IncrementadorComponent,
     GraficoDonutComponent,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+    ProfileComponent
   ],
   exports:[
     DashboardComponent,
@@ -34,9 +42,11 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
     PagesComponent
   ],
   imports:[
+    CommonModule,
     FormsModule,
     SharedModule,
     ChartsModule,
+    PipesModule,
     PAGES_ROUTES
   ]
 })

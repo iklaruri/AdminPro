@@ -1,12 +1,9 @@
 import { Routes, RouterModule } from "@angular/router";
-import { LoginComponent } from './login/login.component';
 import { NoPageComponent } from './shared/no-page/no-page.component';
-import { RegisterComponent } from './login/register.component';
 
 
-const appRoutes: Routes = [  
-   { path: 'login', component: LoginComponent },
-   { path: 'register', component: RegisterComponent },
+
+const appRoutes: Routes = [
    { path: '**', component: NoPageComponent }
 ]
 
