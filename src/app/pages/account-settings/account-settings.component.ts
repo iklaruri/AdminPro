@@ -13,33 +13,33 @@ export class AccountSettingsComponent implements OnInit {
   constructor(public settingsService:SettingsService) { }
 
   ngOnInit(): void {
-    this.colocarCheck()
+    this.colocarCheck();
   }
 
   cambiarColor(tema:string,link:any){
-    this.aplicarCheck(link)
-    this.settingsService.aplicarTema(tema)
+    this.aplicarCheck(link);
+    this.settingsService.aplicarTema(tema);
   }
 
   aplicarCheck(link:any){
-    let selectores:any= document.getElementsByClassName('selector')
+    let selectores:any= document.getElementsByClassName('selector');
 
     for( let ref of selectores){
-      ref.classList.remove('working')
+      ref.classList.remove('working');
     }
 
-    link.classList.add('working')
+    link.classList.add('working');
   }
 
 
   colocarCheck(){
-    let selectores:any= document.getElementsByClassName('selector')
-    let tema = this.settingsService.ajustes.tema
+    let selectores:any= document.getElementsByClassName('selector');
+    let tema = this.settingsService.ajustes.tema;
 
     for( let ref of selectores){
       if( ref.getAttribute('data-theme') === tema){
-        ref.classList.add('working')
-        break
+        ref.classList.add('working');
+        break;
       }
     }
 

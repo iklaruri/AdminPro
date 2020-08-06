@@ -8,4 +8,4 @@ const appRoutes: Routes = [
    { path: '', redirectTo:'/login', pathMatch:'full' }
 ]
 
-export const LOGIN_ROUTES = RouterModule.forRoot(appRoutes, {useHash:true})
+export const LOGIN_ROUTES = RouterModule.forRoot(appRoutes, {useHash:true});

@@ -13,6 +13,8 @@ import { IncrementadorComponent } from '../components/incrementador/incrementado
 import { GraficoDonutComponent } from '../components/graficos/grafico-donut/grafico-donut.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { ProfileComponent } from './profile/profile.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 
 // MODULOS
 import { SharedModule } from '../shared/shared.module';
@@ -20,6 +22,7 @@ import { PipesModule } from '../pipes/pipes.module';
 
 //RUTAS
 import { PAGES_ROUTES } from './pages.routes';
+
 
 
 
@@ -33,7 +36,9 @@ import { PAGES_ROUTES } from './pages.routes';
     IncrementadorComponent,
     GraficoDonutComponent,
     AccountSettingsComponent,
-    ProfileComponent
+    ProfileComponent,
+    UsuariosComponent,
+    ModalUploadComponent
   ],
   exports:[
     DashboardComponent,

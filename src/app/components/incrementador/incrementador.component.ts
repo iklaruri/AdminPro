@@ -8,10 +8,10 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef }
 })
 export class IncrementadorComponent implements OnInit {
 
-  @Input() leyenda:string
-  @Input() porcentaje:number
-  @Output() cambioValor:EventEmitter<number> = new EventEmitter()
-  @ViewChild('progreso') progreso:ElementRef
+  @Input() leyenda:string;
+  @Input() porcentaje:number;
+  @Output() cambioValor:EventEmitter<number> = new EventEmitter();
+  @ViewChild('progreso') progreso:ElementRef;
 
   constructor() {
 
@@ -23,31 +23,31 @@ export class IncrementadorComponent implements OnInit {
   actualizarBarraValor(nuevoValor:number){
 
     if(nuevoValor >= 100){
-      this.porcentaje=100
+      this.porcentaje=100;
     }else if(nuevoValor <= 0){
-      this.porcentaje=0
+      this.porcentaje=0;
     }else{
-      this.porcentaje=nuevoValor
+      this.porcentaje=nuevoValor;
     }
 
-    this.progreso.nativeElement.value=this.porcentaje
-    this.cambioValor.emit(this.porcentaje)
+    this.progreso.nativeElement.value=this.porcentaje;
+    this.cambioValor.emit(this.porcentaje);
 
-    this.progreso.nativeElement.focus()
+    this.progreso.nativeElement.focus();
   }
 
   cambiarValor(valor:number){
     if(this.porcentaje > 100){
-      this.porcentaje = 100
-      return
+      this.porcentaje = 100;
+      return;
     }
 
     if(this.porcentaje < 0){
-      this.porcentaje = 0
-      return
+      this.porcentaje = 0;
+      return;
     }
 
-    this.porcentaje = this.porcentaje + valor
-    this.cambioValor.emit(this.porcentaje)
+    this.porcentaje = this.porcentaje + valor;
+    this.cambioValor.emit(this.porcentaje);
   }
 }

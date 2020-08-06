@@ -14,7 +14,7 @@ declare function init_plugins();
 })
 export class RegisterComponent implements OnInit {
 
-  formulario:FormGroup
+  formulario:FormGroup;
 
   constructor(public usuarioService:UsuarioService, public router:Router) { }
 
@@ -44,13 +44,13 @@ export class RegisterComponent implements OnInit {
       password: new FormControl(null, Validators.required),
       password2: new FormControl(null, Validators.required),
       condiciones: new FormControl(false),
-    }, {validators: this.passwordNoIguales('password','password2')})
+    }, {validators: this.passwordNoIguales('password','password2')});
 
   }
 
   registrarUsuario(){
     if(this.formulario.invalid){
-      return
+      return;
     }
 
     if(!this.formulario.value.condiciones){
@@ -59,7 +59,7 @@ export class RegisterComponent implements OnInit {
         text:'Debe de aceptar las condiciones',
         icon:'warning'
       })
-      return
+      return;
     }
 
     let usuario = new Usuario(
@@ -68,7 +68,7 @@ export class RegisterComponent implements OnInit {
       this.formulario.value.password
     )
 
-    this.usuarioService.crearUsuario(usuario).subscribe( res => this.router.navigate(['/login']))
+    this.usuarioService.crearUsuario(usuario).subscribe( res => this.router.navigate(['/login']));
 
 
   }

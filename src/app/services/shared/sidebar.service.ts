@@ -21,7 +21,25 @@ export class SidebarService {
         {
           titulo:'Gráficas',
           url:'/grafics'
-        },        
+        },
+      ]
+    },
+    {
+      titulo:'Mantenimientos',
+      icono:'mdi mdi-folder-locl-open',
+      submenu:[
+        {
+          titulo:'Usuarios',
+          url:'/usuarios'
+        },
+        {
+          titulo:'Hospitales',
+          url:'/hospitales'
+        },
+        {
+          titulo:'Médicos',
+          url:'/medicos'
+        },
       ]
     }
   ]

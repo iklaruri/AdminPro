@@ -8,30 +8,30 @@ export class ImagenPipe implements PipeTransform {
 
   transform(img: string, tipo: string = 'usuario'): any {
 
-    let url = URL_SERVICIOS + '/img'
+    let url = URL_SERVICIOS + '/img';
 
     if(!img){
-      return url +'/usuario/xxx'
+      return url +'/usuario/xxx';
     }
 
     if(img.indexOf('https') >= 0){
-      return img
+      return img;
     }
 
     switch (tipo) {
       case 'usuario':
-          url += '/usuario/' + img
+          url += '/usuario/' + img;
       break;
 
       case 'medico':
-          url += '/medico/' + img
+          url += '/medico/' + img;
       break;
 
       case 'hospital':
-          url += '/hospital/' + img
+          url += '/hospital/' + img;
       break;
       default:
-          url += '/usuario/xxx'
+          url += '/usuario/xxx';
       break;
 
     }
